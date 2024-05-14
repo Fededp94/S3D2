@@ -106,8 +106,9 @@
       /* ESERCIZIO 3
          Scrivi una funzione che cambi il testo dei p figli di un div
         */
-      const testoFigli = document.querySelectorAll("div > p");
+
       const changePcontent = function () {
+        const testoFigli = document.querySelectorAll("div > p");
         for (let index = 0; index < testoFigli.length; index++) {
           const cambioElementi = testoFigli[index];
           cambioElementi.innerText = "Cambio il testo dei figli p di un div";
@@ -119,18 +120,19 @@
       /* ESERCIZIO 4
          Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
         */
-      const selezioneLink = document.querySelector("div > a[href]");
+
       const changeUrls = function () {
-        selezioneLink.href = "https://www.google.com"; // seleziono direttamente l'href di body > div > a[href]
+        const selezioneLink = document.querySelector("div > a[href]");
+        selezioneLink.href = "https://www.google.com"; // seleziono direttamente l'href di div > a[href]
       };
       changeUrls();
 
       /* ESERCIZIO 5
          Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
       */
-      const nuovoElemento = document.getElementById("secondList");
 
       const addToTheSecond = function () {
+        const nuovoElemento = document.getElementById("secondList");
         const nuovoLi = document.createElement("li");
         nuovoLi.innerText = "4th";
         secondList.appendChild(nuovoLi);
@@ -141,9 +143,9 @@
       /* ESERCIZIO 6
          Scrivi una funzione che aggiunga un paragrafo al primo div
       */
-      const selezione = document.getElementById("firstDiv");
 
       const addParagraph = function () {
+        const selezione = document.getElementById("firstDiv");
         const paragrafo = document.createElement("p");
         firstDiv.appendChild(paragrafo);
       };
@@ -154,9 +156,8 @@
          Scrivi una funzione che faccia scomparire la prima lista non ordinata
       */
 
-      const selezione2 = document.querySelector("div > ul");
-
       const hideFirstUl = function () {
+        const selezione2 = document.querySelector("div > ul");
         selezione2.remove();
       };
 
@@ -165,9 +166,9 @@
       /* ESERCIZIO 8
          Scrivi una funzione che renda verde il background di ogni lista non ordinata
         */
-      const greenBackGround = document.querySelectorAll("ul");
 
       const paintItGreen = function () {
+        const greenBackGround = document.querySelectorAll("ul");
         for (let index = 0; index < greenBackGround.length; index++) {
           const arrayUl = greenBackGround[index];
           arrayUl.style.backgroundColor = "green";
@@ -178,8 +179,9 @@
       /* ESERCIZIO 9
          Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
         */
-      const clickArray = document.querySelectorAll("h1");
+
       const makeItClickable = function () {
+        const clickArray = document.querySelectorAll("h1");
         clickArray = typeof "string";
         for (let index = 0; index < clickArray.length; index++) {
           /** SBAGLIATOOOOO, esercizio 9 SBAGLIATOOO **/
@@ -194,9 +196,9 @@
       /* ESERCIZIO 10
          Crea una funzione che, al click sul footer, riveli l'URL del link interno come contenuto di un alert()
         */
-      const footer = document.querySelector("footer");
 
       const revealFooterLink = function () {
+        const footer = document.querySelector("footer");
         footer.addEventListener("click", function () {
           // si usa addEventLisner e una funzione dentro l'altra
           alert("Hai cliccato sul footer!");
@@ -208,8 +210,9 @@
          Crea una funzione che crei una tabella nell'elemento con id "tableArea".
          La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
       */
-      const selezioneElemento = document.getElementById("tableArea");
+
       const generateTable = function () {
+        const selezioneElemento = document.getElementById("tableArea");
         selezioneElemento = document.createElement("tr");
         tableArea.appendChild(selezioneElemento);
       };
@@ -233,8 +236,9 @@
       /* EXTRA ESERCIZIO 15
         Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
       */
-      const cambioColore = document.getElementById("changeMyColor");
+
       const changeColorWithRandom = function () {
+        const cambioColore = document.getElementById("changeMyColor");
         cambioColore.addEventListener("click", function () {});
       };
 
