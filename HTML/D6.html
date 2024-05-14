@@ -94,20 +94,36 @@
       /* ESERCIZIO 2
        Scrivi una funzione per aggiungere al titolo della pagina una classe "myHeading"
     */
+      const titolo = document.querySelector("head > title");
 
-      const addClassToTitle = function () {};
+      const addClassToTitle = function () {
+        titolo.classList.add("myHeading");
+      };
+
+      addClassToTitle();
+      console.log(titolo);
 
       /* ESERCIZIO 3
        Scrivi una funzione che cambi il testo dei p figli di un div
       */
+      const testoFigli = document.querySelectorAll("div > p");
+      const changePcontent = function () {
+        for (let index = 0; index < testoFigli.length; index++) {
+          const cambioElementi = testoFigli[index];
+          cambioElementi.innerText = "Cambio il testo dei figli p di un div";
+        }
+      };
 
-      const changePcontent = function () {};
+      changePcontent();
 
       /* ESERCIZIO 4
        Scrivi una funzione che cambi la proprietà href di ogni link (tranne quello nel footer) con il valore https://www.google.com
       */
-
-      const changeUrls = function () {};
+      const selezioneLink = document.querySelector("div > a[href]");
+      const changeUrls = function () {
+        selezioneLink.href = "https://www.google.com";
+      };
+      changeUrls();
 
       /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
