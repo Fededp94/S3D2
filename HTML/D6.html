@@ -35,7 +35,7 @@
   </head>
 
   <body>
-    <div>
+    <div id="firstDiv">
       <h1 id="titolo">Questo è il titolo della pagina</h1>
       <h2>Questo è il sottotitolo della pagina</h2>
     </div>
@@ -121,21 +121,34 @@
       */
       const selezioneLink = document.querySelector("div > a[href]");
       const changeUrls = function () {
-        selezioneLink.href = "https://www.google.com";
+        selezioneLink.href = "https://www.google.com"; // seleziono direttamente l'href di body > div > a[href]
       };
       changeUrls();
 
       /* ESERCIZIO 5
        Scrivi una funzione che aggiunga un nuovo elemento lista alla seconda lista non ordinata
     */
+      const nuovoElemento = document.getElementById("secondList");
 
-      const addToTheSecond = function () {};
+      const addToTheSecond = function () {
+        const nuovoLi = document.createElement("li");
+        nuovoLi.innerText = "4th";
+        secondList.appendChild(nuovoLi);
+      };
+
+      addToTheSecond();
 
       /* ESERCIZIO 6
        Scrivi una funzione che aggiunga un paragrafo al primo div
     */
+      const selezione = document.getElementById("firstDiv");
 
-      const addParagraph = function () {};
+      const addParagraph = function () {
+        const paragrafo = document.createElement("p");
+        firstDiv.appendChild(paragrafo);
+      };
+      addParagraph();
+      console.log(firstDiv);
 
       /* ESERCIZIO 7
        Scrivi una funzione che faccia scomparire la prima lista non ordinata
